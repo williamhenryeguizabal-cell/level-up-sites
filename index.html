@@ -1,168 +1,356 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Level Up Sites | Diseño Web en El Salvador</title>
+  <title>Armwrestling Quezaltepeque</title>
+  <link rel="icon" href="https://armwrestling-quezaltepeque.netlify.app/fotos/logo1x1.png">
 
-<link rel="icon" href="https://level-up-sites.netlify.app/logo1x1.jpeg">
+  <meta name="description"
+    content="Armwrestling en Quezaltepeque, El Salvador. Fuerza, técnica y disciplina llevadas al límite. Entrena con atletas enfocados en competición real y alto rendimiento.">
 
-<meta name="description" content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
+  <meta property="og:title" content="QUEZALTEPEQUE ARMWRESTLING | Fuerza. Técnica. Dominio.">
+  <meta property="og:description"
+    content="El nivel no se habla, se demuestra. Únete al equipo de armwrestling de Quezaltepeque y entrena para competir al máximo nivel.">
+  <meta property="og:image" content="https://armwrestling-quezaltepeque.netlify.app/fotos/logo1x1.png">
+  <meta property="og:url" content="https://armwrestling-quezaltepeque.netlify.app">
+  <meta property="og:type" content="website">
 
-<meta property="og:title" content="Level Up Sites | Diseño Web en El Salvador">
-<meta property="og:description" content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
-<meta property="og:image" content="https://level-up-sites.netlify.app/logo1x1.jpeg">
-<meta property="og:url" content="https://level-up-sites.netlify.app">
-<meta property="og:type" content="website">
-
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
 
 
   <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Caveat:wght@400..700&family=Ceviche+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Caveat:wght@400..700&family=Ceviche+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
 
 
 </head>
 
 <body>
   <header>
-    <div class="container-logo"><img src="logo1x1.jpeg" alt="logo" class="logo"></div>
+    <div class="container-logo"><img src="fotos/logo1x1.png" alt="logo" class="logo"></div>
     <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
-  ☰
-</div>
-    <div class="container-menu" id="menu">
-      <a href="index.html" class="paginas"><h3>Inicio</h3></a>
-      <a href="2servicios.html" class="paginas"><h3>Servicios</h3></a>
-      
-      <a href="4precios.html" class="paginas"><h3>Soluciones web</h3></a>
-      <a href="6faq.html" class="paginas"><h3>FAQ</h3></a>
-      <a href="5contactos.html" class="paginas"><h3>Contactanos</h3></a>
-      
+      ☰
     </div>
-    
-      
+    <div class="container-menu" id="menu">
+      <a href="index.html" class="paginas">
+        <h3>Inicio</h3>
+      </a>
+      <a href="2nosotros.html" class="paginas">
+        <h3>Nosotros</h3>
+      </a>
+      <a href="3top.html" class="paginas">
+        <h3>Top</h3>
+      </a>
+
+      <a href="5contactos.html" class="paginas">
+        <h3>Contactos</h3>
+      </a>
+
+
+    </div>
+
+
   </header>
-<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+  <section class="inicio fade-in">
+    <div class="inicio-img">
+      <div class="inicio-texto">
+        <h1>FUERZA DISCIPLINA <BR> </h1><span>Y HONOR</span>
+        <p>Club de lucha de brazos Quezaltepeque. <br>
+          Entrenamos cuerpo, mente y carácter.</p>
+
+      </div>
+      <a href="5contactos.html" class="btn fade-in"><i class="ri-function-line"></i> Unirse al club </a>
+      <a href="2nosotros.html" class="btn2 fade-in">Conócenos <i class="ri-send-ins-line"></i></a>
+    </div>
+
+  </section>
+
+  <section class="inicio-familia ">
+
+    <h3>SOMOS MÁS QUE UN DEPORTE,</h3>
+    <h2>SOMOS FAMILIA.</h2>
+    <p>Un club unido por la pasión del Armwrestling, <br>
+      aquí encontrarás un lugar para superarte, <br>
+      hacer amigos representar a Quezaltepeque con orgullo.
+
+    </p>
+    <a href="2nosotros.html" class="btn3 fade-in">Conoce nuestra historia <i class="ri-send-ins-line"></i></a>
+  </section>
+
+  <section class="inicio-entrenamiento">
+    <h2>Entrenamientos</h2>
+    <h3> TRABAJA, SUPÉRATE, HAZTE MÁS <span>FUERTE.</span></h3>
+    <div class="container-entrenamientos">
+      <div class="entrenamiento fade-in">
+
+        <i class="ri-arrow-up-long-fill"></i>
+        <h3>FUERZA</h3>
+        <p>Ejercicios enfocados en fuerza maxima y resistencia.</p>
+      </div>
+      <hr>
+      <div class="entrenamiento fade-in">
+        <i class="ri-brain-line"></i>
+        <h3>TÉCNICA</h3>
+        <p>Mejora tu técnica con entrenamiento especializado.</p>
+      </div>
+      <hr>
+      <div class="entrenamiento fade-in">
+        <i class="ri-team-line"></i>
+        <h3>COMUNIDAD</h3>
+        <p>Entrena y crece junto a personas que comparten tú pasión.</p>
+      </div>
+      <hr>
+      <div class="entrenamiento fade-in">
+        <i class="ri-trophy-line"></i>
+        <h3>COMPETICIÓN</h3>
+        <p>Prepárate para competir y poner en alto a Quezaltepeque.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="inicio-tops">
+    <div class="container-top-texto">
+      <h2>TOPS MÁS FUERTES DEL CUB</h2> <a href="3top.html" class="btn4">Ver ranking completo <i
+          class="ri-arrow-right-line"></i></a>
+    </div>
+
+
+    <div class="container-tops">
+
+      <div class="top-1 fade-in">
+        <div class="numero-top">
+          1°
+        </div>
+        <img src="fotos/top-1.png" alt="Foto de la persona que tiene top">
+        <h2>William</h2>
+        <p>Peso: <span>72kg</span></p>
+      </div>
+
+      <div class="top-1 fade-in">
+        <div class="numero-top">
+          2°
+        </div>
+        <img src="fotos/top-2.png" alt="Foto de la persona que tiene top">
+        <h2>Henry</h2>
+        <p>Peso: <span>72kg</span></p>
+      </div>
+
+      <div class="top-1 fade-in">
+        <div class="numero-top">
+          3°
+        </div>
+        <img src="fotos/top-3.png" alt="Foto de la persona que tiene top">
+        <h2>Duvan</h2>
+        <p>Peso: <span>72kg</span></p>
+      </div>
+
+      <div class="top-1 fade-in">
+        <div class="numero-top">
+          4°
+        </div>
+        <img src="fotos/top-4.png" alt="Foto de la persona que tiene top">
+        <h2>Miguel</h2>
+        <p>Peso: <span>72kg</span></p>
+      </div>
+
+      <div class="top-1 fade-in">
+        <div class="numero-top">
+          5°
+        </div>
+        <img src="fotos/top-5.png" alt="Foto de la persona que tiene top">
+        <h2>Daniel</h2>
+        <p>Peso: <span>72kg</span></p>
+      </div>
+
+
+
+    </div>
+
+  </section>
 
 
 
 
-<section class="inicio">  <div class="container-inicio-texto"><span class="tag">SOLUCIONES DIGITALES</span><h1>Desarrollo Web <span>Profesional</span></h1>
-<p>En Level Up Sites creamos sitios web modernos, rápidos y <br> optimizados que impulsan tu negocio al siguiente nivel.</p>
-<a href="4precios.html" class="btn" ><i class="ri-function-line"></i> Ver soluciones </a> <a href="5contactos.html" class="btn5" >Solicitar cotización <i class="ri-send-ins-line"></i></a>
-</div>
-<div class="container-inicio-png"><img src="https://www.infobae.com/new-resizer/lJ7nTjs6eeH5kro3L-sJCQhLDoI=/arc-anglerfish-arc2-prod-infobae/public/6JATESB7HVDRZKCNLYFUZ5BZUQ.jpg" alt="Persona con computadora"></div>
+  <section class="inicio-eventos">
 
-</section> <br>
-<section class="inicio-part2 fade-in"><h2 >Diseño de Páginas Web Quezaltepeque </h2> 
-<p >¿Tu empresa o negocio aún no está en Internet? <br>
-¡Si tu negocio aún no está en Internet, estás perdiendo muchas ventas!</p> <br>
-<br> <h3 >En Level Up Sites te ofrecemos: </h3> 
-
-<div class="container-ofrendas fade-in">
-    <div class="ofrenda"><h3>Páginas Web  </h3> <br>
-        <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg" alt="Computadora">
-       <br> <br><p>Diseñamos sitios personalizados que se adaptan a cualquier dispositivo y que captan clientes.</p>
-    </div> 
-    <div class="ofrenda">
-        <h3>Optimización SEO</h3> <br>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4H0Ee_TVll9Hzvq-uVSi7NMc9c2lNGvYV2A&s" alt="SEO">
-       <br><br> <p>Mejoramos tu visibilidad en Google para atraer mucho más trafico a tu web.</p>
-        </div> 
-    <div class="ofrenda">
-        <h3>Mantenimiento web</h3> <br>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwalb2Rx7TbuFvvsGvnYOSTG4-Xcbg0SN6ZA&s" alt="Mantenimiento web">
-        <br><br><p>Te acompañamos con actualizaciones constantes y soporte técnico.</p>
-
-    </div> 
-    
-</div>
-<a href="2servicios.html" class="btn2" >Ver diseños</a>
-<br>
-
- 
-</section>
-
-<br><br>
-<section class="inicio-foto"><h2 class="fade-in">Tener un sitio web es algo imprescindible en la actualidad </h2> <p class="fade-in">Para que tu marca tenga éxito en las redes necesitas un  Diseño de Páginas Web bien estructurado, que cumpla con la personalidad de tu negocio, con tus necesidades y las de tus clientes.</p></section>
-
-<section class="proceso fade-in">
-
-<h2 class="fade-in">Nuestro Proceso</h2>
-<hr class="fade-in">
-<p class="fade-in">Así trabajamos para llevar tu negocio al mundo digital.</p>
-<div class="container-pasos">
-  <div class="pasos fade-in">
-   <span><p>01</p></span><div class="iconos-proceso"> <i class="ri-search-line"></i></div><hr>
-    <h3>Diagnóstico</h3>
-<p>Analizamos tu negocio, tus objetivos y tu competencia para diseñar la mejor estrategia.</p></div>
-  <div class="pasos fade-in">
-    <span><p>02</p></span><div class="iconos-proceso"><i class="ri-palette-line"></i></div><hr>
-    <h3>Diseño</h3>
-<p>Creamos una propuesta visual atractiva, moderna y alineada con tu marca.</p></div>
-  <div class="pasos fade-in">
-     <span><p>03</p></span><div class="iconos-proceso"><i class="ri-code-s-slash-line"></i></div><hr>
-    <h3>Desarrollo</h3>
-<p>Programamos tu sitio con tecnologías modernas, rápidas y seguras.</p></div>
-  <div class="pasos fade-in">
-    <span><p>04</p></span><div class="iconos-proceso"><i class="ri-upload-2-fill"></i></div><hr>
-    <h3>Publicación</h3>
-<p>Lanzamos tu sitio al aire con dominio, hosting y todo listo para recibir clientes.</p></div>
-
- </div>
-
-</section>
+    <h2>Próximos eventos</h2>
+    <div class="container-eventos">
 
 
-<br>
-<p class="eslogan"> ¿Listo para tener tu sitio web? </p>
-<p class="eslogan2">Crea tu sitio web profesional sin compromiso:</p>
-<br>
+      <div class="evento fade-in">
 
-<a href="4precios.html" class="btn3" >Crear ahora</a>
+
+        <div class="evento-img">
+          <img src="fotos/eventos.jpeg" alt="lucha de brazos">
+          <div class="fecha">
+            28 <br>
+            JUN
+          </div>
+
+        </div>
+
+        <div class="evento-texto">
+          <h2>Torneo interno</h2>
+          <p>torneo exclusivo para miembros del club</p>
+          <p><span><i class="ri-map-pin-line"></i></span> Quezaltepeque, La Libertad <br> <span><i
+                class="ri-time-line"></i></span> 1:00 PM.</p>
+        </div>
+      </div>
 
 
 
+      <div class="evento fade-in">
+
+
+        <div class="evento-img">
+          <img src="fotos/logo-horizontal.jpeg" alt="lucha de brazos">
+        </div>
+
+        <div class="evento-texto">
+          <h2>No hay eventos activos</h2>
+
+          <p>Estamos preparando nuevos evento. <br>
+            Mantente atento a nuestras redes y entérate primero.</p>
+        </div>
+      </div>
+      <div class="evento fade-in">
+        <div class="evento-img">
+          <img src="fotos/logo-horizontal.jpeg" alt="lucha de brazos">
+        </div>
+
+        <div class="evento-texto">
+          <h2>No hay eventos activos</h2>
+
+          <p>Estamos preparando nuevos evento. <br>
+            Mantente atento a nuestras redes y entérate primero.</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <a href="5contactos.html" class="btn5 fade-in">Ver más información <i class="ri-send-ins-line"></i></a>
+
+  </section>
+
+  <section class="inicio-ubicación">
+
+    <div class="container-ubicación-texto fade-in">
+      <h2> UBICACIÓN</h2>
+      <h3><i class="ri-map-pin-line"></i> Quezaltepeque, La Libertad</h3>
+      <p>Parque Central Norberto Moran, Quezaltepeque</p>
+      <h3><i class="ri-time-line"></i> Horarios de entrenamientos</h3>
+      <p>Domingos de 1:00 PM - 4:00 PM <br>
+        (Con un patron quincenal, aunque pueden surgir ajustes)</p>
+    </div>
+
+    <div id="mapa" class="fade-in"></div>
+
+
+  </section>
+
+  <section class="inicio-final">
+
+    <div class="container-final">
+      <div class="container-final-texto fade-in">
+
+        <h2>LISTO PARA UNIRTE?</h2>
+        <p>Ven a entrenar con nosotros <br> y descubre de lo que eres capaz.</p>
+        <a href="5contactos.html" class="btn6">Contactar <i class="ri-send-ins-line"></i></a>
+      </div>
+
+      <div class="container-final-logo fade-in">
+
+        <img src="fotos/logo1x1.png" alt="">
+      </div>
+      <hr>
+      <div class="container-final-contactos fade-in">
+        <h3>SÍGUENOS</h3>
+        <div class="social-icons fade-in">
+
+          <a class="instagram" href="https://www.instagram.com/armwrestling_quezaltepeque/" target="_blank">
+            <i class="ri-instagram-line"></i>
+          </a>
+
+          <a class="tiktok" href="https://www.tiktok.com/@armwrestling.quez?lang=es-419" target="_blank">
+            <i class="ri-tiktok-fill"></i>
+          </a>
+
+        </div>
+
+        <h3>CONTÁCTANOS</h3>
+        <p><i class="ri-whatsapp-line"></i> 7868-3237</p>
+        <p><i class="ri-map-pin-line"></i> Quezaltepeque, La Libertad</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© Level Up Sites X Armwrestling Quezaltepeque | Todos los derechos reservados</p>
+  </footer>
 
 
 
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+  <script>
+    var map = L.map('mapa').setView([13.83106425332837, -89.27216705459757], 15);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-
-
-
-
-
-
-
-
-
-
-
-
-<footer>
-    
-    
-    <p>© Level Up Sites | Todos los derechos reservados</p>
-</footer>
-
-
-<script src="index.js"></script>
-
+    L.marker([13.83106425332837, -89.27216705459757]).addTo(map)
+      .bindPopup('Aquí entrenamos')
+      .openPopup();
+  </script>
+  <script src="index.js"></script>
 </body>
+
 </html>
