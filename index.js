@@ -69,3 +69,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+// lenguaje boton
+
+const btn = document.getElementById("languageBtn");
+const menu = document.getElementById("languageMenu");
+const arrow = document.getElementById("arrow");
+
+btn.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+
+    
+
+});
+
+document.addEventListener("click", (e) => {
+    
+    if (!document.querySelector(".language-selector").contains(e.target)) {
+        
+        menu.classList.remove("active");
+
+    }
+
+});

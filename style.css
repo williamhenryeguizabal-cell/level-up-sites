@@ -58,10 +58,72 @@ header {
 
 }
 
+.language-selector{
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn{
+    margin: 0;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -10px;
+    left: 210px;
+    min-width :90px;
+    min-height: 40px;
+     border-radius:10px;
+     
+         box-shadow: 15px 15px 25px rgba(14, 20, 71, 0.356);
+
+}
+
+.language-btn:hover{
+    background: #d8d8d8;
+
+ }
+
+.language-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    left: 210px;
+
+    display: none;
+
+    background: white;
+    margin-top: 0;
+    width :90px;
+    min-height: 40px;
+     border-radius: 0px 0px 10px 10px;
+}
+
+.language-menu a{
+    display: block;
+    padding: 12px 0px;
+    color: #001f4d;
+    text-decoration: none;
+}
+
+.language-menu:hover{
+    background: #f5f5f5;
+}
+
+.language-menu.active{
+    display: block;
+}
+
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 .fade-in 
 {
@@ -1400,6 +1462,9 @@ footer {
         right: 33px;
     }
 
+
+
+
     .overlay {
         position: fixed;
         top: 0;
@@ -1416,10 +1481,51 @@ footer {
     }
 
 
-    /* 
-* {
+
+    
+.language-btn{
+    margin: 0;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 60px;
+    min-width :90px;
+    min-height: 40px;
+     border-radius:10px;
+     
+         box-shadow: 15px 15px 25px rgba(14, 20, 71, 0.356);
+
+}
+
+.language-btn:hover{
+    background: #d8d8d8;
+
+ }
+
+.language-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    left: 60px;
+
+    display: none;
+
+    background: white;
+    margin-top: -9px;
+    width :90px;
+    min-height: 40px;
+     border-radius: 0px 0px 10px 10px;
+}
+    
+/* * {
     outline: 1px solid red;
-} 
+}  */
 
 
 
