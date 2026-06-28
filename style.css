@@ -1,29 +1,49 @@
-body,html {
-     font-family:"Montserrat", sans-serif;
-    background-color: #0e1322;
-    margin: 0;
-    padding: 0;
+html {
+    scroll-behavior: smooth;
     text-align: center;
-    
-    color: #fff;
-
-
 }
 
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #121212;
+    color: #FFFFFF;
+
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+
  /* general */
-header {
+header{
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 30px;
+
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #0c121f;
-    height: 20px;
-    width: 1284px;
-    top: 0;
-    position: fixed;
-    color: #000000;
-    z-index: 10;
+    align-items: center;
 
-}  
+    padding: 20px;
+
+    background: rgba(18,18,18,.9);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #2A2A2A;
+
+    z-index: 1000;
+}
 .container-logo {
     display: flex;
     align-items: center;
@@ -65,7 +85,8 @@ header {
 
 .language-btn{
     margin: 0;
-    background: white;
+    background: var(--bg);
+    color: var(--white);
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -74,18 +95,16 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: -10px;
     left: 210px;
     min-width :90px;
     min-height: 40px;
      border-radius:10px;
-     
-         box-shadow: 15px 15px 25px rgba(14, 20, 71, 0.356);
+     border: 1px solid var(--border);
 
 }
 
 .language-btn:hover{
-    background: #d8d8d8;
+    background: var(--surface);
 
  }
 
@@ -96,10 +115,11 @@ header {
     left: 210px;
 
     display: none;
+     border: 1px solid var(--border);
 
-    background: white;
+    background: var(--bg);
     margin-top: 0;
-    width :90px;
+    width :88px;
     min-height: 40px;
      border-radius: 0px 0px 10px 10px;
 }
@@ -107,12 +127,12 @@ header {
 .language-menu a{
     display: block;
     padding: 12px 0px;
-    color: #001f4d;
+    color: var(--white);
     text-decoration: none;
 }
 
 .language-menu:hover{
-    background: #f5f5f5;
+    background: var(--surface);
 }
 
 .language-menu.active{
@@ -137,24 +157,45 @@ footer {
             padding: 25px;
             background-color: #020617;
             font-size: 14px;
-            color: #94a3b8;
+            color: var(--text);
             text-align: center;
+
+
             
         }      
 
 
+
         
-
-
-.paginas {
-    color: inherit;
+.paginas{
+    color:#FFFFFF;
     text-decoration: none;
-    
+    transition:.3s;
 }
-.paginas:hover {
-    color: #797979;
-    
+
+.paginas:hover{
+    color:#4A76A8;
 }
+
+
+:root{
+
+    --bg:#121212;
+    --surface:#171717;
+
+    --primary:#0B1B3D;
+    --accent:#4A76A8;
+
+    --white:#FFFFFF;
+
+    --text:#D1D5DB;
+    --border:#2A2A2A;
+
+    --title-font:"Montserrat",sans-serif;
+    --body-font:"Inter",sans-serif;
+}
+
+
 
 @keyframes aparecer {
             from {
@@ -195,7 +236,7 @@ footer {
 
 .tag {
     font-size: 12px;
-    color: #573bf6;
+    color: var(--accent);
     position: absolute;
     bottom: 503px;
     
@@ -231,14 +272,15 @@ footer {
 
 }
 .container-inicio-texto h1 span{
-    color: #3b82f6;
+    color: var(--accent);
     
 
 }
 .container-inicio-texto p{
     max-width: 500px;
     font-size: 17px;
-    color: rgb(209, 209, 209);
+    color: var(--text);
+    font-family: var(--body-font);
     
     
 
@@ -246,21 +288,21 @@ footer {
 .btn{
     font-size: 23px;
     display: inline-block;
-    background: linear-gradient(45deg,#3b13ac, #3e3bf6);
+background: var(--primary);
     padding: 18px ;
     border-radius: 35px;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     transition: 0.3s;
     margin-top: 20px;
     justify-content: center;
-    font-family: "Oswald", sans-serif;
-    box-shadow: 0 5px 15px #4d1ca8b0; 
+    font-family: var(--title-font);
+    box-shadow: 0 5px 15px var(--primary); 
     
 }
 .btn:hover{  
-    background: linear-gradient(45deg,#4116b6, #2825bb);
-    box-shadow: 0 8px 18px #4d1ca8; 
+background: var(--primary);
+    box-shadow: 0 8px 18px var(--accent); 
     transform: translateY(-15px) scale(1.01);
             transition: 0.25s;
 
@@ -269,30 +311,29 @@ footer {
 .btn5{
     font-size: 23px;
     display: inline-block;
-    background: linear-gradient(45deg,#3c13ac09, #3e3bf610);
+background: var(--primary);
     padding: 18px ;
     border-radius: 35px;
-    color: #6721e7;
+    color: var(--white);
     text-decoration: none;
     transition: 0.3s;
     margin-top: 20px;
     margin-left: 20px;
-    font-family: "Oswald", sans-serif;
-    box-shadow: 0 5px 15px #6721e7; 
+    font-family: var(--title-font);
+    box-shadow: 0 5px 15px var(--primary); 
     
 }
 .btn5:hover{  
-    background: linear-gradient(45deg,#4116b6, #2825bb);
-    box-shadow: 0 8px 18px #4d1ca8; 
+background: var(--primary);
+    box-shadow: 0 8px 18px var(--accent); 
     transform: translateY(-15px) scale(1.01);
             transition: 0.25s;
-    color: white;
 }
 
 
 .inicio-part2 {
     padding: 20px;
-   background-color: #121b30 ;
+background: var(--primary);
     max-width: 1270px;
     text-align: center;
     text-shadow: 2px 2px 5px black;
@@ -312,7 +353,8 @@ footer {
 }
 .inicio-part2 p{
     font-size: 20px;
-    color: rgb(209, 209, 209);
+    color: var(--text);
+    font-family: var(--body-font);
 
     
 }
@@ -341,8 +383,9 @@ footer {
     justify-content: center;
     height: 300px;
     max-width: 250px;
-    background-color: #141f36;
+    background: var(--primary) ;
     border-radius: 11px;
+    border: 1px solid var(--accent);
 }
 
 .ofrenda img {
@@ -354,6 +397,9 @@ footer {
 .ofrenda p {
     padding: 10px;
     font-size: 18px;
+        color: var(--text);
+
+    font-family: var(--body-font);
 }
 .ofrenda h3 {
     font-size: 20px;
@@ -364,21 +410,22 @@ footer {
 .btn2{
     font-size: 25px;
     display: inline-block;
-      background: linear-gradient(45deg,#3b13ac, #3e3bf6);
+background: var(--primary);
     padding: 13px ;
     border-radius: 50px;
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: 0.3s;
     margin-top: 25px;
-    
-    font-family: "Oswald", sans-serif;
-    box-shadow: 0 5px 15px #4d1ca8; 
+        border: 1px solid var(--accent);
+
+   font-family: var(--title-font);
+    box-shadow: 0 5px 15px var(--primary); 
     
 }
 .btn2:hover{  
-     background: linear-gradient(45deg,#4116b6, #2825bb);
-    box-shadow: 0 8px 18px #4d1ca8; 
+background: var(--primary);
+    box-shadow: 0 8px 18px var(--accent); 
     transform: translateY(-15px) scale(1.01);
             transition: 0.25s;
 
@@ -410,7 +457,8 @@ footer {
 .inicio-foto p { 
     padding: 0px 300px ;
     font-size: 22px;
-    color: rgb(236, 223, 223);
+    color: var(--text);
+    font-family: var(--body-font);
 
 }
 .inicio-foto h2 { 
@@ -421,7 +469,7 @@ footer {
 
 .proceso {
       padding: 20px;
-   background-color: #0823637c ;
+      background: var(--primary);
     max-width: 1270px;
     text-align: center;
     text-shadow: 2px 2px 5px black;
@@ -434,17 +482,18 @@ footer {
 
 .proceso h2 {
     font-size: 40px;
-    font-family: "Oswald", sans-serif ;
+    font-family: var(--title-font);
 }
 .proceso hr {
     width: 90px;
    height: 6px;
-   background-color: #3b83f6ce;
+   background-color:var(--accent);
    border: none;
 }
 .proceso p {
      font-size: 18px;
-    color: rgba(209, 209, 209, 0.603);
+    color: var(--text);
+    font-family: var(--body-font);
 }
 
 .container-pasos {
@@ -459,9 +508,9 @@ footer {
     height: 65px;
     width: 65px;
     font-size: 40px;
-    background-color: #082e61;
-    border: 2px solid #086ece;
-    color: #086ece;
+    background-color: var(--primary);
+    border: 2px solid var(--accent);
+    color: var(--accent);
     transition: all 0.55s;
     display: flex;
     justify-content: center;
@@ -472,16 +521,16 @@ footer {
 
 .pasos span p{
     text-align: center;
-    font-family: "Archivo Black", sans-serif ;
+    font-family: var(--body-font);
     font-size: 60px;
-    color: #082363;
+    color: var(--accent);
     text-shadow: none;
      transition: all 0.55s;
      margin-top: -30px;
     
 }
 .pasos:hover span p {
-     color: #072772;
+     color: var(--white);
   text-shadow: 0 8px 18px #08236362; 
     transform: translateY(-4px) scale(1.01);
 
@@ -490,8 +539,8 @@ footer {
 .pasos hr {
     width: 130px;
    height: 2px;
-    border: 2px solid #086ece;
-    background: linear-gradient(45deg, #086ece , #0823637c);
+    border: 2px solid var(--accent);
+    background: linear-gradient(45deg, var(--accent) , var(--primary));
    border: none;
    margin-left: 60px;
    margin-top: -35px;
@@ -499,9 +548,9 @@ footer {
     
 }
 .pasos:hover hr {
-    background: linear-gradient(45deg, #086ece , #0823637c);
+    background: linear-gradient(45deg, var(--accent) , var(--primary));
   
-    box-shadow: 0 8px 18px #0364be; 
+    box-shadow: 0 8px 18px var(--accent); 
     transform: translateY(-4px) scale(1.01);
     
 }
@@ -511,9 +560,9 @@ footer {
 }
 
 .pasos:hover .iconos-proceso {
-   background-color: #0084ff;
-  border: 2px solid #0084ff;
-    box-shadow: 0 8px 18px #0364be; 
+   background-color: var(--accent);
+  border: 2px solid var(--accent);
+    box-shadow: 0 8px 18px var(--accent); 
     transform: translateY(-4px) scale(1.01);
    
     color: rgb(202, 196, 196);
@@ -540,10 +589,13 @@ footer {
 }
 .pasos p {
     transition: all 0.55s;
+    font-family: var(--body-font);
+        color: var(--text);
+
    
 }
 .pasos:hover p {
-   color: rgba(255, 255, 255, 0.918);
+   color: var(--white);
     text-shadow: 0 8px 18px #22282e; 
     transform: translateY(-4px) scale(1.01);
     
@@ -552,14 +604,14 @@ footer {
 
 
 .eslogan { 
-    color: #f7f7f7;
-     font-family: "Oswald", sans-serif;
+   color: var(--white);
+    font-family: var(--title-font);
     text-shadow: 2px 2px 5px black;
     font-size: 55px;
 }
 .eslogan2 { 
-    color: #f7f7f7a1;
-     font-family: "Oswald", sans-serif;
+   color: var(--text);
+    font-family: var(--title-font);
     text-shadow: 2px 2px 5px black;
     font-size: 25px;
 }
@@ -567,20 +619,20 @@ footer {
 .btn3{
     font-size: 25px;
     display: inline-block;
-     background: linear-gradient(45deg,#3b13ac, #3e3bf6);
+background: var(--primary);
     padding: 15px ;
     border-radius: 45px;
-    color: white;
+    color: var(--text);
     text-decoration: none;
     transition: 0.3s;
     margin-top: 0px;
-    font-family: "Oswald", sans-serif;
-    box-shadow: 0 5px 15px #4d1ca8; 
+    font-family: var(--title-font);
+    box-shadow: 0 5px 15px var(--primary); 
     
 }
 .btn3:hover{  
-    background: linear-gradient(45deg,#4116b6, #2825bb);
-    box-shadow: 0 8px 18px #4d1ca8; 
+background: var(--primary);
+    box-shadow: 0 8px 18px var(--primary); 
     transform: translateY(-15px) scale(1.01);
             transition: 0.25s;
 
