@@ -1,153 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Level Up Sites | Diseño Web en El Salvador</title>
 
-<link rel="icon" href="https://level-up-sites.pages.dev/logo1x1.jpeg">
+  <link rel="icon" href="https://level-up-sites.pages.dev/fotos/logo sin fondo.png.jpeg">
 
-<meta name="description" content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
+  <meta name="description"
+    content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
 
-<meta property="og:title" content="Level Up Sites | Diseño Web en El Salvador">
-<meta property="og:description" content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
-<meta property="og:image" content="https://level-up-sites.pages.dev/logo1x1.jpeg">
-<meta property="og:url" content="https://level-up-sites.pages.dev">
-<meta property="og:type" content="website">
+  <meta property="og:title" content="Level Up Sites | Diseño Web en El Salvador">
+  <meta property="og:description"
+    content="Creamos páginas web modernas y rápidas para negocios y emprendimientos en El Salvador.">
+  <meta property="og:image" content="https://level-up-sites.pages.dev/logo1x1.jpeg">
+  <meta property="og:url" content="https://level-up-sites.pages.dev">
+  <meta property="og:type" content="website">
 
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#000000">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
 
 
   <link rel="stylesheet" href="style.css">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
- <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
 
 
 </head>
 
 <body>
   <header>
-    <div class="container-logo"><a href="index.html"><img src="logo1x1.jpeg" alt="logo" class="logo"></a></div>
+    <div class="container-logo"><a href="index.html"><img src="fotos/logo sin fondo.png" alt="logo" class="logo"> </a>   </div>
 
     <div class="language-selector">
 
-        <button class="language-btn" id="languageBtn">
-          <span>Español</span>
-          
-        </button>
+      <button class="language-btn" id="languageBtn">
+        <span>Español</span>
 
-        <div class="language-menu" id="languageMenu">
-          <a href="en/index.html">Inglés</a>
-        </div>
+      </button>
+
+      <div class="language-menu" id="languageMenu">
+        <a href="en/index.html">Inglés</a>
+      </div>
+
+    </div>
+
+    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
+      ☰
+    </div>
+    <div class="container-menu" id="menu">
+      <a href="index.html" class="paginas">
+        <h3>Inicio</h3>
+      </a>
+      <a href="2servicios.html" class="paginas">
+        <h3>Servicios</h3>
+      </a>
+
+      <a href="4precios.html" class="paginas">
+        <h3>Soluciones web</h3>
+      </a>
+      <a href="6faq.html" class="paginas">
+        <h3>FAQ</h3>
+      </a>
+      <a href="5contactos.html" class="paginas">
+        <h3>Contactanos</h3>
+      </a>
+
+    </div>
+
+
+  </header>
+  <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+
+
+
+
+  <section class="inicio">
+    <div class="container-inicio-texto"><span class="tag">SOLUCIONES DIGITALES</span>
+      <h1>Desarrollo Web <span>Profesional</span></h1>
+      <p>En Level Up Sites creamos sitios web modernos, rápidos y <br> optimizados que impulsan tu negocio al siguiente
+        nivel.</p>
+      <a href="4precios.html" class="btn-primary"><i class="ri-function-line"></i> Ver soluciones </a> <a href="5contactos.html"
+        class="btn-primary">Solicitar cotización <i class="ri-send-ins-line"></i></a>
+    </div>
+    <div class="container-inicio-png"><img
+        src="https://www.infobae.com/new-resizer/lJ7nTjs6eeH5kro3L-sJCQhLDoI=/arc-anglerfish-arc2-prod-infobae/public/6JATESB7HVDRZKCNLYFUZ5BZUQ.jpg"
+        alt="Persona con computadora"></div>
+
+  </section> <br>
+  <section class="inicio-part2 fade-in">
+    <h2>Diseño de Páginas Web Quezaltepeque </h2>
+    <p>¿Tu empresa o negocio aún no está en Internet? <br>
+      ¡Si tu negocio aún no está en Internet, estás perdiendo muchas ventas!</p> <br>
+    <br>
+    <h3>En Level Up Sites te ofrecemos: </h3>
+
+    <div class="container-ofrendas fade-in">
+      <div class="ofrenda">
+        <h3>Páginas Web </h3> <br>
+        <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg" alt="Computadora">
+        <br> <br>
+        <p>Diseñamos sitios personalizados que se adaptan a cualquier dispositivo y que captan clientes.</p>
+      </div>
+      <div class="ofrenda">
+        <h3>Optimización SEO</h3> <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4H0Ee_TVll9Hzvq-uVSi7NMc9c2lNGvYV2A&s"
+          alt="SEO">
+        <br><br>
+        <p>Mejoramos tu visibilidad en Google para atraer mucho más trafico a tu web.</p>
+      </div>
+      <div class="ofrenda">
+        <h3>Mantenimiento web</h3> <br>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwalb2Rx7TbuFvvsGvnYOSTG4-Xcbg0SN6ZA&s"
+          alt="Mantenimiento web">
+        <br><br>
+        <p>Te acompañamos con actualizaciones constantes y soporte técnico.</p>
 
       </div>
 
-    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
-  ☰
-</div>
-    <div class="container-menu" id="menu">
-      <a href="index.html" class="paginas"><h3>Inicio</h3></a>
-      <a href="2servicios.html" class="paginas"><h3>Servicios</h3></a>
-      
-      <a href="4precios.html" class="paginas"><h3>Soluciones web</h3></a>
-      <a href="6faq.html" class="paginas"><h3>FAQ</h3></a>
-      <a href="5contactos.html" class="paginas"><h3>Contactanos</h3></a>
-      
     </div>
-    
-      
-  </header>
-<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+    <a href="2servicios.html" class="btn-secondary">Ver diseños</a>
+    <br>
 
 
+  </section>
+
+  <br><br>
+  <section class="inicio-foto">
+    <h2 class="fade-in">Tener un sitio web es algo imprescindible en la actualidad </h2>
+    <p class="fade-in">Para que tu marca tenga éxito en las redes necesitas un Diseño de Páginas Web bien estructurado,
+      que cumpla con la personalidad de tu negocio, con tus necesidades y las de tus clientes.</p>
+  </section>
+
+  <section class="proceso fade-in">
+
+    <h2 class="fade-in">Nuestro Proceso</h2>
+    <hr class="fade-in">
+    <p class="fade-in">Así trabajamos para llevar tu negocio al mundo digital.</p>
+    <div class="container-pasos">
+      <div class="pasos fade-in">
+        <span>
+          <p>01</p>
+        </span>
+        <div class="iconos-proceso"> <i class="ri-search-line"></i></div>
+        <hr>
+        <h3>Diagnóstico</h3>
+        <p>Analizamos tu negocio, tus objetivos y tu competencia para diseñar la mejor estrategia.</p>
+      </div>
+      <div class="pasos fade-in">
+        <span>
+          <p>02</p>
+        </span>
+        <div class="iconos-proceso"><i class="ri-palette-line"></i></div>
+        <hr>
+        <h3>Diseño</h3>
+        <p>Creamos una propuesta visual atractiva, moderna y alineada con tu marca.</p>
+      </div>
+      <div class="pasos fade-in">
+        <span>
+          <p>03</p>
+        </span>
+        <div class="iconos-proceso"><i class="ri-code-s-slash-line"></i></div>
+        <hr>
+        <h3>Desarrollo</h3>
+        <p>Programamos tu sitio con tecnologías modernas, rápidas y seguras.</p>
+      </div>
+      <div class="pasos fade-in">
+        <span>
+          <p>04</p>
+        </span>
+        <div class="iconos-proceso"><i class="ri-upload-2-fill"></i></div>
+        <hr>
+        <h3>Publicación</h3>
+        <p>Lanzamos tu sitio al aire con dominio, hosting y todo listo para recibir clientes.</p>
+      </div>
+
+    </div>
+
+  </section>
 
 
-<section class="inicio">  <div class="container-inicio-texto"><span class="tag">SOLUCIONES DIGITALES</span><h1>Desarrollo Web <span>Profesional</span></h1>
-<p>En Level Up Sites creamos sitios web modernos, rápidos y <br> optimizados que impulsan tu negocio al siguiente nivel.</p>
-<a href="4precios.html" class="btn" ><i class="ri-function-line"></i> Ver soluciones </a> <a href="5contactos.html" class="btn5" >Solicitar cotización <i class="ri-send-ins-line"></i></a>
-</div>
-<div class="container-inicio-png"><img src="https://www.infobae.com/new-resizer/lJ7nTjs6eeH5kro3L-sJCQhLDoI=/arc-anglerfish-arc2-prod-infobae/public/6JATESB7HVDRZKCNLYFUZ5BZUQ.jpg" alt="Persona con computadora"></div>
+  <br>
+  <p class="eslogan"> ¿Listo para tener tu sitio web? </p>
+  <p class="eslogan2">Crea tu sitio web profesional sin compromiso:</p>
+  <br>
 
-</section> <br>
-<section class="inicio-part2 fade-in"><h2 >Diseño de Páginas Web Quezaltepeque </h2> 
-<p >¿Tu empresa o negocio aún no está en Internet? <br>
-¡Si tu negocio aún no está en Internet, estás perdiendo muchas ventas!</p> <br>
-<br> <h3 >En Level Up Sites te ofrecemos: </h3> 
-
-<div class="container-ofrendas fade-in">
-    <div class="ofrenda"><h3>Páginas Web  </h3> <br>
-        <img src="https://www.godaddy.com/resources/latam/wp-content/uploads/sites/4/pagina-web.jpg" alt="Computadora">
-       <br> <br><p>Diseñamos sitios personalizados que se adaptan a cualquier dispositivo y que captan clientes.</p>
-    </div> 
-    <div class="ofrenda">
-        <h3>Optimización SEO</h3> <br>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4H0Ee_TVll9Hzvq-uVSi7NMc9c2lNGvYV2A&s" alt="SEO">
-       <br><br> <p>Mejoramos tu visibilidad en Google para atraer mucho más trafico a tu web.</p>
-        </div> 
-    <div class="ofrenda">
-        <h3>Mantenimiento web</h3> <br>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwalb2Rx7TbuFvvsGvnYOSTG4-Xcbg0SN6ZA&s" alt="Mantenimiento web">
-        <br><br><p>Te acompañamos con actualizaciones constantes y soporte técnico.</p>
-
-    </div> 
-    
-</div>
-<a href="2servicios.html" class="btn2" >Ver diseños</a>
-<br>
-
- 
-</section>
-
-<br><br>
-<section class="inicio-foto"><h2 class="fade-in">Tener un sitio web es algo imprescindible en la actualidad </h2> <p class="fade-in">Para que tu marca tenga éxito en las redes necesitas un  Diseño de Páginas Web bien estructurado, que cumpla con la personalidad de tu negocio, con tus necesidades y las de tus clientes.</p></section>
-
-<section class="proceso fade-in">
-
-<h2 class="fade-in">Nuestro Proceso</h2>
-<hr class="fade-in">
-<p class="fade-in">Así trabajamos para llevar tu negocio al mundo digital.</p>
-<div class="container-pasos">
-  <div class="pasos fade-in">
-   <span><p>01</p></span><div class="iconos-proceso"> <i class="ri-search-line"></i></div><hr>
-    <h3>Diagnóstico</h3>
-<p>Analizamos tu negocio, tus objetivos y tu competencia para diseñar la mejor estrategia.</p></div>
-  <div class="pasos fade-in">
-    <span><p>02</p></span><div class="iconos-proceso"><i class="ri-palette-line"></i></div><hr>
-    <h3>Diseño</h3>
-<p>Creamos una propuesta visual atractiva, moderna y alineada con tu marca.</p></div>
-  <div class="pasos fade-in">
-     <span><p>03</p></span><div class="iconos-proceso"><i class="ri-code-s-slash-line"></i></div><hr>
-    <h3>Desarrollo</h3>
-<p>Programamos tu sitio con tecnologías modernas, rápidas y seguras.</p></div>
-  <div class="pasos fade-in">
-    <span><p>04</p></span><div class="iconos-proceso"><i class="ri-upload-2-fill"></i></div><hr>
-    <h3>Publicación</h3>
-<p>Lanzamos tu sitio al aire con dominio, hosting y todo listo para recibir clientes.</p></div>
-
- </div>
-
-</section>
-
-
-<br>
-<p class="eslogan"> ¿Listo para tener tu sitio web? </p>
-<p class="eslogan2">Crea tu sitio web profesional sin compromiso:</p>
-<br>
-
-<a href="4precios.html" class="btn3" >Crear ahora</a>
+  <a href="4precios.html" class="btn-primary">Crear ahora</a>
 
 
 
@@ -169,14 +222,15 @@
 
 
 
-<footer>
-    
-    
+  <footer>
+
+
     <p>© Level Up Sites | Todos los derechos reservados</p>
-</footer>
+  </footer>
 
 
-<script src="index.js"></script>
+  <script src="index.js"></script>
 
 </body>
+
 </html>
