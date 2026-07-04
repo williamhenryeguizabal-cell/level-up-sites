@@ -38,34 +38,48 @@
 
 <body>
   <header>
-    <div class="container-logo"><a href="index.html"><img src="fotos/logo sin fondo.png" alt="logo" class="logo"></a></div>
+    <div class="container-logo"><a href="index.html"><img src="fotos/logo sin fondo.png" alt="logo" class="logo"> </a>
+    </div>
 
- <div class="language-selector">
 
+
+    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
+      ☰
+    </div>
+    <div class="container-menu" id="menu">
+      <a href="index.html" class="paginas">
+        <h3>Inicio</h3>
+      </a>
+      <a href="2servicios.html" class="paginas">
+        <h3>Servicios</h3>
+      </a>
+
+      <a href="4precios.html" class="paginas">
+        <h3>Soluciones web</h3>
+      </a>
+      <a href="6faq.html" class="paginas">
+        <h3>FAQ</h3>
+      </a>
+      <a href="5contactos.html" class="paginas">
+        <h3>Contactanos</h3>
+      </a>
+
+      <hr class="menu-divider">
+
+      <div class="language-selector">
         <button class="language-btn" id="languageBtn">
-          <span>Español</span>
+          🌐 Español
         </button>
 
         <div class="language-menu" id="languageMenu">
-          <a href="en/5contactos.html">Inglés</a>
+          <a href="en/5contactos.html">English</a>
         </div>
-
       </div>
 
-    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
-  ☰
-</div>
-    <div class="container-menu" id="menu">
-      <a href="index.html" class="paginas"><h3>Inicio</h3></a>
-      <a href="2servicios.html" class="paginas"><h3>Servicios</h3></a>
-      
-      <a href="4precios.html" class="paginas"><h3>Soluciones web</h3></a>
-      <a href="6faq.html" class="paginas"><h3>FAQ</h3></a>
-      <a href="5contactos.html" class="paginas"><h3>Contactanos</h3></a>
-      
     </div>
-    
-      
+
+
+
   </header>
 <div id="overlay" class="overlay" onclick="closeMenu()"></div>
 <br><br><br> <br>

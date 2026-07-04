@@ -30,44 +30,58 @@
 </head>
 
 <body>
-  <header>
-    <div class="container-logo"><a href="index.html"><img src="fotos/logo sin fondo.png" alt="logo" class="logo"></a></div>
+ <header>
+    <div class="container-logo"><a href="index.html"><img src="fotos/logo sin fondo.png" alt="logo" class="logo"> </a>
+    </div>
 
- <div class="language-selector">
 
+
+    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
+      ☰
+    </div>
+    <div class="container-menu" id="menu">
+      <a href="index.html" class="paginas">
+        <h3>Inicio</h3>
+      </a>
+      <a href="2servicios.html" class="paginas">
+        <h3>Servicios</h3>
+      </a>
+
+      <a href="4precios.html" class="paginas">
+        <h3>Soluciones web</h3>
+      </a>
+      <a href="6faq.html" class="paginas">
+        <h3>FAQ</h3>
+      </a>
+      <a href="5contactos.html" class="paginas">
+        <h3>Contactanos</h3>
+      </a>
+
+      <hr class="menu-divider">
+
+      <div class="language-selector">
         <button class="language-btn" id="languageBtn">
-          <span>Español</span>
+          🌐 Español
         </button>
 
         <div class="language-menu" id="languageMenu">
-          <a href="en/2servicios.html">Inglés</a>
+          <a href="en/2servicios.html">English</a>
         </div>
-
       </div>
 
-    <div class="container-icon-menu" onclick="toggleMenu()" id="icon">
-  ☰
-</div>
-    <div class="container-menu" id="menu">
-     <a href="index.html" class="paginas"><h3>Inicio</h3></a>
-      <a href="2servicios.html" class="paginas"><h3>Servicios</h3></a>
-      
-      <a href="4precios.html" class="paginas"><h3>Soluciones web</h3></a>
-      <a href="6faq.html" class="paginas"><h3>FAQ</h3></a>
-      <a href="5contactos.html" class="paginas"><h3>Contactanos</h3></a>
-      
     </div>
-    
-      
+
+
+
   </header>
 <div id="overlay" class="overlay" onclick="closeMenu()"></div>
-<section class=""> </section>
+
 
 <br><br><br>
 
 <h1 class="fade-in">No importa el rubro</h1>
 <p class="fade-in">Sin importar a que se dedique tu negocio, en <strong>Level Up sites</strong> lo adaptamos según tus necesidades, <br> contamos con el equipo técnico necesario para que tu proyecto sea todo un éxito.</p>
-<div class="container-rubros fade-in">
+<div class="container-rubros">
     
         <div class="item-rubro">
             <figure>   
