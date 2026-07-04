@@ -96,7 +96,6 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 190px;
     min-width: 90px;
     min-height: 40px;
     border-radius: 10px;
@@ -113,14 +112,15 @@ header {
     position: absolute;
     top: 100%;
     left: 0;
-    left: 190px;
+    
 
     display: none;
     border: 1px solid var(--border);
 
     background: var(--bg);
     margin-top: 0;
-    width: 88px;
+    width: 100%;
+    max-width: 96px;
     min-height: 40px;
     border-radius: 0px 0px 10px 10px;
 }
@@ -139,6 +139,16 @@ header {
 .language-menu.active {
     display: block;
 }
+
+
+
+.menu-divider {
+    height: 50px;
+    border: none;
+    border: 1px solid var(--border);
+    margin: 20px auto;
+}
+
 
 .fade-in.visible {
     opacity: 1;
@@ -1490,7 +1500,7 @@ footer {
     .language-btn {
 
         left: 0px;
-        
+
         border-radius: 10px;
 
 
@@ -1510,14 +1520,16 @@ footer {
         border-radius: 0px 0px 10px 10px;
     }
 
-    .menu-divider{
-    width:80%;
-    border:none;
-    border-top:1px solid var(--border);
-    margin:20px auto;
-}
+    .menu-divider {
+        width: 80%;
+        height: 0%;
 
-/* 
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 20px auto;
+    }
+
+    /* 
     * {
         outline: 1px solid red;
     } */
@@ -1868,7 +1880,7 @@ footer {
 
     .btn7 {
         margin-top: 22px;
-        font-size: 17px; 
+        font-size: 17px;
         margin: 20px;
         margin-left: 100px;
     }
@@ -1883,7 +1895,7 @@ footer {
         font-size: 15px;
         margin: 20px;
         margin-left: 100px;
-        
+
     }
 
 
