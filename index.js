@@ -16,31 +16,33 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // menu
 
-
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("menu");
   const icon = document.getElementById("icon");
   const overlay = document.getElementById("overlay");
 
-  menu.classList.toggle("active");
-  overlay.classList.toggle("active");
-
-  if (menu.classList.contains("active")) {
+  function openMenu() {
+    menu.classList.add("active");
+    overlay.classList.add("active");
     icon.innerHTML = "✖";
-  } else {
+  }
+
+  function closeMenu() {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
     icon.innerHTML = "☰";
   }
-}
 
-function closeMenu() {
-  const menu = document.getElementById("menu");
-  const icon = document.getElementById("icon");
-  const overlay = document.getElementById("overlay");
+  icon.addEventListener("click", () => {
+    if (menu.classList.contains("active")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
 
-  menu.classList.remove("active");
-  overlay.classList.remove("active");
-  icon.innerHTML = "☰";
-}
+  overlay.addEventListener("click", closeMenu);
+});
 
 // faq
 document.addEventListener("DOMContentLoaded", () => {

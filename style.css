@@ -228,7 +228,6 @@ footer {
     flex-direction: row;
     display: flex;
     padding: 20px;
-    padding: 20px;
 
     margin: 20px auto;
     margin-top: 50px;
@@ -1529,12 +1528,6 @@ footer {
         margin: 20px auto;
     }
 
-    /* 
-    * {
-        outline: 1px solid red;
-    } */
-
-
 
 
 
@@ -1828,16 +1821,11 @@ footer {
 
     .container-precios {
         display: flex;
-        align-items: center;
-        flex-direction: column;
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 100%;
         text-align: center;
-
-
     }
 
     .item-precio {
@@ -1870,7 +1858,6 @@ footer {
         margin-top: 22px;
         font-size: 15px;
         margin: 20px;
-        margin-left: 100px;
     }
 
     .contacto2 {
@@ -1882,7 +1869,6 @@ footer {
         margin-top: 22px;
         font-size: 17px;
         margin: 20px;
-        margin-left: 100px;
     }
 
     .contacto3 {
@@ -1894,7 +1880,6 @@ footer {
         margin-top: 25px;
         font-size: 15px;
         margin: 20px;
-        margin-left: 100px;
 
     }
 
